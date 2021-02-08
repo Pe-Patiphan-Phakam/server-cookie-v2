@@ -58,7 +58,7 @@ module.exports = {
     console.log(value)
     return new Promise((resolve, reject) => {
       ModelAgree.find({})
-      .select('data.pathname')
+      .select('data.pathname createdAt')
       .exec(function(err, doc) {
         if (err) return reject(err)
         if (doc) {
